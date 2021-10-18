@@ -7,16 +7,16 @@ import  javax.persistence.EntityTransaction ;
 import  javax.persistence.Persistence ;
 
 @Entity
-public class JpaUtil extends Medico {
-}
+//public class JpaUtil extends Medico {
+//}
 
-public  final  class  JpaUtil {
+public  final  class  JpaUtil extends Medico{
     private  static  final  String  PERSISTENCE_UNIT  =  " medicosPU " ;
     private  static  ThreadLocal < EntityManager > threadEntityManager =  new  ThreadLocal < EntityManager > ();
     private  static  EntityManagerFactory entityManagerFactory;
 
-    JpaUtil privado () {
-    }
+    //JpaUtil privado () {
+    //}
 
     public static EntityManager getEntityManager() {
         if (entityManagerFactory == null) {

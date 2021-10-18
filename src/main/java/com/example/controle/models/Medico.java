@@ -1,7 +1,6 @@
 package com.example.controle.models;
 
 import javax.persistence.*;
-import javax.validation.constraints.Email;
 import java.util.Date;
 
 @Table(name = "medicos")
@@ -14,7 +13,7 @@ public class Medico {
     private String nome;
     @Column(name = "sobrenome", nullable = false)
     private String sobrenome;
-    @Column(name = "sexo", nullable = false, length = 1)
+    @Column(name = "sexo", nullable = false, length = 2)
     private String sexo;
     @Column(name = "especialidade", nullable = false)
     private String especialidade;
@@ -22,10 +21,7 @@ public class Medico {
     private String cpf;
     @Column(name = "senha", nullable = false)
     private String senha;
-    @JoinColumn(name = "id_Suporte")
-    private Suporte suporte;
-    @JoinColumn(name = "id_Prontuario")
-    private Prontuario prontuario;
+
 
     public Long getId() {
         return id;
@@ -83,19 +79,5 @@ public class Medico {
         this.senha = senha;
     }
 
-    public Suporte getSuporte() {
-        return suporte;
-    }
 
-    public void setSuporte(Suporte suporte) {
-        this.suporte = suporte;
-    }
-
-    public Prontuario getProntuario() {
-        return prontuario;
-    }
-
-    public void setProntuario(Prontuario prontuario) {
-        this.prontuario = prontuario;
-    }
 }
